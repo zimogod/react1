@@ -1,0 +1,121 @@
+react:
+	优点 ：
+		虚拟DOM
+		生命周期
+		灵活性强
+		声明式设计
+		数据可以统一管理
+		JSX语法：更加安全、执行更快
+	缺点：
+		不支持ES6语法
+		学习成本高
+		门槛高
+		用了redux后页面逻辑复杂
+
+	更新视图的函数：
+		render，整个生命周期中调用三次
+		初始化 render
+		数据更新 render
+		属性更新 render
+	生命周期：
+		render
+		属性改变，视图是否更新
+		数据改变，视图是否更新
+	如果在class明名的组件中，无需写默认数据、属性
+	通过this.state就可以完成
+
+	修改数据的唯一方法
+		this.setState({
+			num:this.state.num
+		})
+	小程序中修改数据的唯一方法是：
+		this.setData({
+			num:num
+		})
+	事件onClick大写C
+	render函数内部调用数据，不需要this；
+	render函数外部调用数据或者方法，需要指定this
+	
+	样式类名声明class改变为className
+
+	结构赋值 ES6中方法 
+	...扩展运算符
+	=> 箭头函数，没有this指向
+	async await 异步操作 await永远跟在async作用域内
+	arr.fliter(()=>{})
+	find()
+	every()
+	some()
+	reduceRight()
+
+	class类，块级作用域
+	super()接收关键字
+
+react-router：
+	2.x react-router
+			hashRouter
+			IndexRoute
+			Router
+			Link
+			NavLink
+			Route
+			Redirect
+			统一在一个文件内集中嵌套
+		获取params、query
+			this.props.params.id
+			this.props.query.queryName
+	4.x react-router-dom
+			BrowserRouter
+			hashHistory
+			exact
+			Link
+			NavLink
+			Switch
+			Route
+			Redirect
+			在组件内部嵌套
+		获取params、query
+			this.props.macth.params.paramsName
+			this.props.location.query.queryName
+		Link：标签的激活属性
+			activeClass
+
+redux:
+	store 数据仓库
+		createStore(reducer,'默认数据',中间件)
+	action 行为动作 标识
+		dispatch(action)
+	reducer 纯函数，处理逻辑运算
+		reducer(state,action)
+
+react-redux:
+	Provider
+		Provider 传store 就是将数据映射到Provider
+		包裹容器中
+	connect
+	  connect(mapStateToProps,mapDispatchToProps)
+	  mapStateToProps:将数据以属性的方式映射到
+	  				  组件中
+	  mapDispatchToProps:将方法以属性的方式映射到当前
+	  					 组件中
+	connect()(当前组件)：
+		作用：反馈当前组件的状态到Provider中的store
+
+	react-redux:
+		分组件思想
+			UI组件
+				只负责编写DOM结构
+			redux组件
+				只负责处理redux数据
+		页面使用用redux组件
+
+
+
+
+
+
+
+
+
+
+	
